@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+
+public class CarpoolApp {
+   private ArrayList<Carpool> carpools;
+
+   public CarpoolApp() {
+      carpools = new ArrayList<>();
+   }
+
+   public void addCarpool(Carpool carpool) {
+      carpools.add(carpool);
+   }
+
+   public void removeCarpool(Carpool carpool) {
+      carpools.remove(carpool);
+   }
+
+   public ArrayList<Carpool> getCarpools() {
+      return carpools;
+   }
+
+   public static void main(String[] args) {
+      CarpoolApp app = new CarpoolApp();
+      Carpool carpool1 = new Carpool("My Carpool");
+      User user1 = new User("John", "john@email.com", "123456789");
+      User user2 = new User("Jane", "jane@email.com", "987654321");
+      carpool1.addUser(user1);
+      carpool1.addUser(user2);
+      Ride ride1 = new Ride("Origin1", "Destination1", "2022-01-01 12:00:00", user1);
+      ride1.addPassenger(user2);
+      carpool1.addRide(ride1);
+      app.addCarpool(carpool1);
+
+      for (Carpool carpool : app.getCarpools()) {
+         System.out.println("Carpool: " + carpool.getName());
+         for (User user : carpool.getUsers()) {
+            System.out.println("User: " + user.getName() + " (" + user.getEmail() + ")");
+         }
+         for (Ride ride : carpool.getRides()) {
+            System.out.println("Ride: " + ride.getOrigin() + " to " + ride.getDestination() + " at " + ride.getTime());
+            System.out.println("Driver: " + ride.getDriver().getName() + " (" + ride.getDriver().getEmail() + ")");
+            System.out.println("Passengers:");
+            for (User passenger : ride.getPassengers()) {
+               System.out.println("- " + passenger.getName() + " (" + passenger.getEmail() + ")");
+            }
+         }
+      }
+   }
+}
