@@ -1,0 +1,105 @@
+import java.util.ArrayList;
+
+public class Carpool {
+   private String name;
+   private ArrayList<User> users;
+   private ArrayList<Ride> rides;
+
+   public Carpool(String name) {
+      this.name = name;
+      users = new ArrayList<>();
+      rides = new ArrayList<>();
+   }
+
+   public void addUser(User user) {
+      users.add(user);
+   }
+
+   public void removeUser(User user) {
+      users.remove(user);
+   }
+
+   public void addRide(Ride ride) {
+      rides.add(ride);
+   }
+
+   public void removeRide(Ride ride) {
+      rides.remove(ride);
+   }
+
+   public ArrayList<User> getUsers() {
+      return users;
+   }
+
+   public ArrayList<Ride> getRides() {
+      return rides;
+   }
+}
+
+public class User {
+   private String name;
+   private String email;
+   private String phone;
+
+   public User(String name, String email, String phone) {
+      this.name = name;
+      this.email = email;
+      this.phone = phone;
+   }
+
+   public String getName() {
+      return name;
+   }
+
+   public String getEmail() {
+      return email;
+   }
+
+   public String getPhone() {
+      return phone;
+   }
+}
+
+public class Ride {
+   private String origin;
+   private String destination;
+   private String time;
+   private User driver;
+   private ArrayList<User> passengers;
+
+   public Ride(String origin, String destination, String time, User driver) {
+      this.origin = origin;
+      this.destination = destination;
+      this.time = time;
+      this.driver = driver;
+      passengers = new ArrayList<>();
+   }
+
+   public void addPassenger(User passenger) {
+      passengers.add(passenger);
+   }
+
+   public void removePassenger(User passenger) {
+      passengers.remove(passenger);
+   }
+
+   public String getOrigin() {
+      return origin;
+   }
+
+   public String getDestination() {
+      return destination;
+   }
+
+   public String getTime() {
+      return time;
+   }
+
+   public User getDriver() {
+      return driver;
+   }
+
+   public ArrayList<User> getPassengers() {
+      return passengers;
+   }
+}
