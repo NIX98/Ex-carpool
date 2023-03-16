@@ -89,9 +89,20 @@
     
     <label for="destination">도착지</label>
     <input type="text" id="destination" name="destination">
-    
+
     <label for="total-people">총 인원수</label>
-    <input type="number" id="total-people" name="total-people">
+    <select id="total-people" name="total-people">
+      <option value="solo">1</option>
+      <option value="two-people">2</option>
+      <option value="three-people">3</option>
+    </select>
+
+    <label for="smoking">동승자 흡연 여부</label>
+    <select id="smoking" name="smoking">
+      <option value="smoke">흡연</option>
+      <option value="nonsmoke">비흡연</option>
+      <option value="anysmoke">상관없음</option>
+    </select>
     
     <button type="submit">택시풀 매칭 찾기</button>
   </form>
