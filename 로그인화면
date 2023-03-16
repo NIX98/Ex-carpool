@@ -104,7 +104,7 @@
     <input type="text" id="destination" name="destination">
     
     <button type="submit"onclick="window.open('ex3.html')">로그인</button>
-    <button type="newsubmit">회원가입</button>
+    <button type="newsubmit"onclick="window.open('ex5.html')">회원가입</button>
 
     
     
