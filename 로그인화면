@@ -103,11 +103,11 @@
     <label for="destination">비밀번호</label>
     <input type="text" id="destination" name="destination">
     
-    <button type="submit">로그인</button>
+    <button type="submit"onclick="window.open('ex3.html')">로그인</button>
     <button type="newsubmit">회원가입</button>
 
-    <button onclick="location.href='ex3.html'">text</button >
-    <button onclick="window.open('ex3.html')">text</button >
+    
+    
 
   </form>
 </body>
