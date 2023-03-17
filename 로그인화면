@@ -103,8 +103,8 @@
     <label for="destination">비밀번호</label>
     <input type="text" id="destination" name="destination">
     
-    <button type="submit"onclick="window.open('ex3.html')">로그인</button>
-    <button type="newsubmit"onclick="window.open('ex5.html')">회원가입</button>
+    <button type="submit"onclick="window.open('실행화면.html')">로그인</button>
+    <button type="newsubmit"onclick="window.open('.html')">회원가입</button>
 
     
     
